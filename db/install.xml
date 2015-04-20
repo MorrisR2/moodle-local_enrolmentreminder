@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/enrolmentreminder/db" VERSION="20140723" COMMENT="XMLDB file for enrolmentreminder module"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="enrolmentreminder" COMMENT="notify users when their enrolment is soon to expire and they have not yet completed.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="courseid" TYPE="int" LENGTH="16" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="tmpltext" TYPE="text" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="leadtime" TYPE="int" LENGTH="7" NOTNULL="true" DEFAULT="259200" SEQUENCE="false" COMMENT="Lead time in seconds"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
