@@ -32,5 +32,5 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2015022704;      // The current plugin version (Date: YYYYMMDDXX)
 $plugin->requires  = 2010031900;      // Requires this Moodle version
-$plugin->cron      = 6;               // Period for cron to check this plugin (secs)
+$plugin->cron      = 3600;               // Period for cron to check this plugin (secs)
 $plugin->component = 'local_enrolmentreminder'; // To check on upgrade, that plugin sits in correct place
